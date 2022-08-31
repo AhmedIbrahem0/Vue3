@@ -8,9 +8,11 @@ use Illuminate\Http\Request;
 
 class PostController extends Controller
 {
-    
+
     public function index(Request $request)
     {
+
+        
         $post=Post::query();
         if($request->has('category_id') and $request->category_id !=''){
             $post->where('category_id',$request->category_id);
