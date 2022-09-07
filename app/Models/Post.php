@@ -16,4 +16,11 @@ class Post extends Model
     public function category(){
         return $this->belongsTo(Category::class);
     }
+
+    public function scopeFilteredProducts($query,$catID){
+
+       return $query->when((!is_null($catID) and $catID != ''),function ($q) use($catID){
+            return $q->where('category_id',$catID);
+        })->paginate(10);
+    }
 }

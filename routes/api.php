@@ -15,7 +15,10 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
-    return $request->user();
+    return response(auth()->user());
 });
-Route::resource('/posts',\App\Http\Controllers\PostController::class);
-Route::resource('/categories',\App\Http\Controllers\CategoryController::class);
+//Route::post('/login','LoginController@login');
+//Route::post('/register','LoginController@register');
+//Route::post('/logout','LoginController@logout');
+Route::apiResource('/posts',\App\Http\Controllers\PostController::class);
+Route::apiResource('/categories',\App\Http\Controllers\CategoryController::class);

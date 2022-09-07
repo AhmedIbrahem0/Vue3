@@ -19,6 +19,7 @@ class PostResource extends JsonResource
             'id'=>$this->id,
             'name'=>$this->name,
             'description'=>substr($this->description,0,50),
+            'category_id'=>$this->category_id,
             'created_at'=>$this->created_at->format('d-m-y'),
             'category'=>new CategoryResource($this->category)
         ];
