@@ -1,5 +1,5 @@
 const mix = require('laravel-mix');
-const configs=require('./webpack.config')
+
 /*
  |--------------------------------------------------------------------------
  | Mix Asset Management
