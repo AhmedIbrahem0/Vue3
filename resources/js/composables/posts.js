@@ -1,5 +1,7 @@
 import {ref,inject} from 'vue';
 import {useRouter} from 'vue-router'
+import PostsStore from "../store/PostsStore";
+import postsStore from "../store/PostsStore";
 export default function usePosts() {
     const swal=inject('$swal');
     const posts= ref({});
@@ -13,6 +15,8 @@ export default function usePosts() {
     }
 
     const getPost=async(id)=>{
+        PostsStore.commit('setPosts',posts)
+        postsStore.state.posts;
         axios.get('/api/posts/'+id).then(
             response=>{
                 post.value=response.data.data;
