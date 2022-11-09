@@ -15,4 +15,3 @@ use Illuminate\Support\Facades\Route;
 
  Route::view('/{any?}','index')->name('index')->where('any','.*');
 
-
