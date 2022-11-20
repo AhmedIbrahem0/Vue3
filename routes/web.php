@@ -12,7 +12,8 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
-
+//This is Main
  Route::view('/mainBranch','index')->name('index')->where('any','.*');
  Route::view('/{any?}','index')->name('index')->where('any','.*');
+//This is Main
 
