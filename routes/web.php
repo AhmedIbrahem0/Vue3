@@ -13,8 +13,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 //This is Main
- Route::view('/thisiSForLocal','index')->name('index')->where('any','.*');
- Route::view('/mainBranch','index')->name('index')->where('any','.*');
+ Route::view('/onlyLocal','index')->name('index')->where('any','.*');
  Route::view('/{any?}','index')->name('index')->where('any','.*');
 //This is Main
 
